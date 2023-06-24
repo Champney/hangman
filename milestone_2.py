@@ -5,6 +5,9 @@ import random
 choice = random.choice(word_list)
 word = choice
 print(word)
+print(word)
+print(word)
+print(word)
 guess = input()
 
 word_expressed_as_list = list(word)
