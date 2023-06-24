@@ -3,7 +3,7 @@ print(word_list)
 
 import random
 word = random.choice(word_list)
-#print(word)
+print(word)
 guess = input()
 
 word_list = list(word)
