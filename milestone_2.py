@@ -6,7 +6,7 @@ word = random.choice(word_list)
 print(word)
 guess = input()
 
-word_list = list(word)
+word_expressed_as_list = list(word)
 if len(guess) == 1 and guess.isalpha() == True:
     if guess in word_list:
         print("Good guess!")
