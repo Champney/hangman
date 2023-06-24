@@ -3,10 +3,11 @@ print(word_list)
 
 import random
 choice = random.choice(word_list)
-print(choice)
+word = choice
+print(word)
 guess = input()
 
-word_expressed_as_list = list(choice)
+word_expressed_as_list = list(word)
 if len(guess) == 1 and guess.isalpha() == True:
     if guess in word_list:
         print("Good guess!")
