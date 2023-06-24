@@ -2,8 +2,8 @@ word_list = ['mango', 'watermelon', 'kiwi', 'raspberry', 'lime']
 print(word_list)
 
 import random
-choice = random.choice(word_list)
-word = choice
+word = random.choice(word_list)
+
 print(word)
 print(word)
 print(word)
