@@ -40,10 +40,6 @@ class Hangman:
             print(f"You have {self.num_lives} lives left.")
  
 
-
-test_1 = Hangman(word_list)
-test_1.ask_for_input()
-print(test_1.word_guessed, test_1.list_of_guesses,test_1.num_letters)
     
 
 
