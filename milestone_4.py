@@ -75,6 +75,7 @@ class Hangman:
         # Be careful! A letter can contain the same letter more than once. TIP: Take a look at the index() method in the string class
         self.letter = letter.lower()
         if self.letter in self.word:
+            print(f"Good guess! {self.letter} is in the word.")
             for i in range(len(self.word)):
                 if self.word[i] == self.letter:
                     self.word_guessed[i] = self.letter
@@ -97,7 +98,7 @@ class Hangman:
         while True:
             letter = input(f" Please enter a letter as your guess: ")
             if len(letter) != 1 or letter.isalpha() == False:
-                print("Please, enter just one character")
+                print("Invalid letter. Please, enter a single alphabetical character.")
             elif letter in self.list_of_guesses:
                 print(f"{self.letter} was already tried")
             else:
