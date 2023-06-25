@@ -1,4 +1,4 @@
-word_list = ['mango', 'watermelon', 'kiwi', 'raspberry', 'lime']
+#word_list = ['mango', 'watermelon', 'kiwi', 'raspberry', 'lime']
 import random
 #word = random.choice(word_list)
 
@@ -52,7 +52,7 @@ class Hangman:
         self.word_guessed = ["_"] * len(self.word)
         self.num_letters = len(set(self.word))
         self.list_letters = []
-        print(f"The mystery word has {self.num_letters} characters")
+        print(f"The mistery word has {self.num_letters} characters")
         print(self.word_guessed)
         pass
 
@@ -97,7 +97,7 @@ class Hangman:
         while True:
             letter = input(f" Please enter a letter as your guess: ")
             if len(letter) != 1 or letter.isalpha() == False:
-                print("Invalid letter. Please, enter a single alphabetical character")
+                print("Please, enter just one character")
             elif letter in self.list_letters:
                 print(f"{self.letter} was already tried")
             else:
