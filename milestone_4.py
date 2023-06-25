@@ -56,7 +56,7 @@ class Hangman:
         print(self.word_guessed)
         pass
 
-    def check_letter(self, letter) -> None:
+    def check_guess(self, letter) -> None:
         '''
         Checks if the letter is in the word.
         If it is, it replaces the '_' in the word_guessed list with the letter.
@@ -101,7 +101,7 @@ class Hangman:
             elif letter in self.list_of_guesses:
                 print(f"{self.letter} was already tried")
             else:
-                self.check_letter(letter)
+                self.check_guess(letter)
                 self.list_of_guesses.append(letter)
                 break
         
