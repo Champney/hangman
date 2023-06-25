@@ -5,6 +5,7 @@ word = random.choice(word_list)
 
 class Hangman:
     def __init__(self, word_list, num_lives=5):
+        
         self.word = word
         self.word_list = word_list
         self.num_lives = num_lives
@@ -12,8 +13,10 @@ class Hangman:
         self.word_guessed = ["_"] * len(word)
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
+        print(f"The mystery word has {self.num_letters} characters")
+        print(self.word_guessed)
         pass
-    
+
     def ask_for_input(self):
         while True:
             guess = input("Please enter a letter as your guess: ")
