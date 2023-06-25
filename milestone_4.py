@@ -18,7 +18,7 @@ class Hangman:
         pass
 
     def check_letter(self, letter) -> None:
-        self.guess = letter.lower()
+        self.letter = letter.lower()
         if self.letter in word:
             for i in range(len(word)):
                 if word[i] == self.letter:
