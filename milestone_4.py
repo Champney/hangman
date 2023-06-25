@@ -83,7 +83,7 @@ class Hangman:
         else:
             self.num_lives -= 1
 
-    def ask_letter(self):
+    def ask_for_input(self):
         '''
         Asks the user for a letter and checks two things:
         1. If the letter has already been tried
@@ -119,7 +119,7 @@ def play_game(word_list):
     # If the user runs out of lives, print "You lost! The word was {word}"
 
     #word = random.choice(word_list)
-    game.ask_letter()
+    game.ask_for_input()
     while True:
         if game.num_lives == 0:
             print(f"You lost! The word was {game.word}")
