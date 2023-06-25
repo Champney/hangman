@@ -125,7 +125,7 @@ def play_game(word_list):
             print(f"You lost!")
             break
         elif game.num_letters == 0:
-            print(f"Congratulations! You won the game!")
+            print(f"Congratulations. You won the game!")
             break
         else:
             print(game.word_guessed)
