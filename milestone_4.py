@@ -129,7 +129,7 @@ def play_game(word_list):
             break
         else:
             print(game.word_guessed)
-            game.ask_letter()
+            game.ask_for_input()
     pass
 
 if __name__ == '__main__':
