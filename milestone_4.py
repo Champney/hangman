@@ -12,7 +12,7 @@ class Hangman:
         self.word = word
         self.word_guessed = ["_"] * len(word)
         self.num_letters = len(set(self.word))
-        self.list_of_guesses = []
+        self.list_letters = []
         print(f"The mistery word has {self.num_letters} characters")
         print(f"{self.word_guessed}")
         pass
@@ -36,11 +36,11 @@ class Hangman:
             letter = input("Please enter a letter as your guess: ")
             if len(letter) != 1 or letter.isalpha() == False:
                 print("Please, enter just one character")
-            elif letter in self.list_of_guesses:
+            elif letter in self.list_letters:
                 print(f"{letter} was already tried")
             else:
                 self.check_letter(letter)
-                self.list_of_guesses.append(letter)
+                self.list_letters.append(letter)
             pass
 
     
