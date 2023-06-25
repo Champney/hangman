@@ -73,3 +73,17 @@ To accomplish this, I used a 'for' loop to iterate through 'word' and used an 'i
 
 ![Alt text](image-1.png)
 
+# Milestone 5
+Once the Hangman class was defined, I only had to write a basic function to call it in a loop until either the variable 'num_lives' reached 0, or if the variable 'num_letters' reached 0 and continuously ask for input if not.
+The parameter to the function is the list of words to be randomly selected from.
+
+![Alt text](image-12.png)
+
+
+I also added some functionality to the 'ask_for_input' to display the positions of the already guessed letters.
+
+![Alt text](image-10.png)
+
+Everything works as expected!
+
+![Alt text](image-9.png)

@@ -45,17 +45,15 @@ class Hangman:
 
 
 def play_game(word_list):
-    
-
+    word = random.choice(word_list)
     game = Hangman(word_list)
-   
     game.ask_for_input()
     while True:
         if game.num_lives == 0:
             print("You lost")
             break
         elif game.num_letters == 0:
-            print(f"You got it! The word is {word}")
+            print(f"You got it! The word is {game.word}")
             break
         else:
             game.ask_for_input()
