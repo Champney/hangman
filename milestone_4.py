@@ -13,7 +13,7 @@ class Hangman:
         self.word_guessed = ["_"] * len(word)
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
-        print(f"The mystery word has {self.num_letters} characters")
+        print(f"The mistery word has {self.num_letters} characters")
         print(self.word_guessed)
         pass
 
