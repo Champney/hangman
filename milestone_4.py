@@ -4,7 +4,7 @@ import random
 word = random.choice(word_list)
 
 class Hangman:
-    def __init__(self,word_list,num_lives=5):
+    def __init__(self, word_list, num_lives=5):
         self.word = word
         self.word_list = word_list
         self.num_lives = num_lives
@@ -12,7 +12,8 @@ class Hangman:
         self.word_guessed = ["_"] * len(word)
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
-
+        pass
+    
     def ask_for_input(self):
         while True:
             guess = input("Please enter a letter as your guess: ")
@@ -25,7 +26,7 @@ class Hangman:
                 self.list_of_guesses.append(guess)
                 break
 
-    def check_guess(self,guess):
+    def check_guess(self, guess):
         self.guess = guess.lower()
         if self.guess in word:
             print(f"Good guess! {self.guess} is in the word.")
