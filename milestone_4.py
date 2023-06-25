@@ -17,22 +17,9 @@ class Hangman:
         print(f"{self.word_guessed}")
         pass
 
-    def ask_letter(self):
-        while True:
-            letter = input("Please enter a letter as your guess: ")
-            if len(letter) != 1 or letter.isalpha() == False:
-                print("Invalid letter. Please, enter a single alphabetical character")
-            elif letter in self.list_of_guesses:
-                print("You already tried that letter!")
-            else:
-                self.check_letter(letter)
-                self.list_of_guesses.append(letter)
-        pass
-
     def check_letter(self, letter) -> None:
         self.guess = letter.lower()
         if self.letter in word:
-            print(f"Good guess! {self.letter} is in the word.")
             for i in range(len(word)):
                 if word[i] == self.letter:
                     self.word_guessed[i] = self.letter
@@ -43,6 +30,20 @@ class Hangman:
             self.num_lives -= 1
             print(f"You have {self.num_lives} lives left.")
         pass
+
+    def ask_letter(self):
+        while True:
+            letter = input("Please enter a letter as your guess: ")
+            if len(letter) != 1 or letter.isalpha() == False:
+                print("Please, enter just one character")
+            elif letter in self.list_of_guesses:
+                print(f"{letter} was already tried")
+            else:
+                self.check_letter(letter)
+                self.list_of_guesses.append(letter)
+            pass
+
+    
 
     
 
